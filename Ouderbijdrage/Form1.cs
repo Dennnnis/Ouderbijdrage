@@ -144,6 +144,7 @@ namespace Ouderbijdrage
                 catch(System.FormatException)
                 {
                     MessageBox.Show("Geen geldige informatie", "Probleem");
+                    textBox3.Text = "DD/MM/YYYY";
                     return;
                 }
                 
@@ -151,7 +152,7 @@ namespace Ouderbijdrage
                 //Als het kind onder de 10 jaar is
                 if (niewKind.leeftijd < 10)
                 {
-                    //Tell hoeveel kinderen er zijn onder 10 jaar
+                    //Tel hoeveel kinderen er zijn onder 10 jaar
                     int KinderenJongerDan10 = 0;
                     foreach (KeyValuePair<string, CKind> kind in kinderen)
                     {
@@ -168,7 +169,7 @@ namespace Ouderbijdrage
                 //Kind is boven 10 jaar
                 else
                 {
-                    //Tell hoeveel kinderen er zijn boven 10 jaar
+                    //Tel hoeveel kinderen er zijn boven 10 jaar
                     int KinderenOuderDan10 = 0;
                     foreach (KeyValuePair<string, CKind> kind in kinderen)
                     {
